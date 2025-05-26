@@ -27,11 +27,11 @@ export default function HomePage() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-primary/10 via-background to-background">
+        <section className="w-full py-16 md:py-24 lg:py-32 xl:py-40 bg-gradient-to-br from-primary/10 via-background to-background">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
+            <div className="grid gap-8 lg:grid-cols-[1fr_minmax(0,_1.5fr)] lg:gap-12 xl:gap-16 items-center">
+              <div className="flex flex-col justify-center space-y-6">
+                <div className="space-y-3">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
                     Connect, Play, and Elevate Your Game
                   </h1>
@@ -39,7 +39,7 @@ export default function HomePage() {
                     SportUp is your ultimate platform to discover local sports events, connect with fellow enthusiasts, and manage your own games.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-3 min-[400px]:flex-row">
                   <Button asChild size="lg" className="shadow-lg hover:shadow-primary/50 transition-shadow">
                     <Link href="/signup">
                       Get Started
@@ -52,14 +52,15 @@ export default function HomePage() {
                   </Button>
                 </div>
               </div>
-              <Image
-                src="https://placehold.co/600x400.png"
-                data-ai-hint="sports people playing"
-                width="600"
-                height="400"
-                alt="Hero"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square shadow-2xl"
-              />
+              <div className="lg:order-last">
+                <Image
+                  src="/images/event-categories/sportss.jpg"
+                  width="1600"
+                  height="900"
+                  alt="Hero Sports Collage"
+                  className="w-full h-auto aspect-video overflow-hidden rounded-xl object-cover shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </section>
