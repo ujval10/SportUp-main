@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { CalendarDays, PlusCircle, Lightbulb, User } from "lucide-react";
-import Image from "next/image";
+// Image import is no longer needed if we remove the specific image component and don't add another one
+// import Image from "next/image"; 
 
 export default function DashboardPage() {
   const { userProfile } = useAuth();
@@ -13,25 +14,18 @@ export default function DashboardPage() {
   return (
     <div className="container mx-auto py-8">
       <Card className="mb-8 shadow-lg border-none bg-gradient-to-r from-primary to-accent text-primary-foreground overflow-hidden">
-        <CardHeader className="pb-2">
+        <CardHeader className="pb-2 text-center"> {/* Centered text for all screen sizes */}
           <CardTitle className="text-3xl font-bold">Welcome back, {userProfile?.displayName || "Sport Enthusiast"}!</CardTitle>
           <CardDescription className="text-primary-foreground/80 text-lg">
             Ready to find or create your next game?
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col md:flex-row items-center justify-between gap-4 pt-2">
+        <CardContent className="flex flex-col items-center justify-center text-center gap-4 pt-2 px-6"> {/* Modified classes for centering */}
           <p className="text-base max-w-2xl">
             SportUp is your hub for all things sports. Discover local events, create your own,
             get smart location suggestions, and manage your profile. Let's get active!
           </p>
-           <Image 
-            src="https://placehold.co/300x200.png" 
-            data-ai-hint="sports equipment collage"
-            alt="Sport illustration" 
-            width={200} 
-            height={150} 
-            className="rounded-lg shadow-md hidden md:block"
-          />
+           {/* Image removed from here */}
         </CardContent>
       </Card>
 
